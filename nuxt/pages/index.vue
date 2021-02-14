@@ -5,14 +5,12 @@
 </template>
 
 <script>
-import Vue from "vue";
-
-export default Vue.extend({
+export default {
   asyncData: async() => {
     const data = await fetch("http://wordpress/wp-json/wp/v2/posts").then(json => json.json());
     return {data: data};
   }
-});
+};
 </script>
 
 <style scoped>

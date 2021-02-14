@@ -14,4 +14,4 @@ app.post('/build', (req, res) => {
   });
 });
 
-app.listen(3000, () => console.log('server is working at :3000'));
+app.listen(80, () => console.log('server is working at :80'));
