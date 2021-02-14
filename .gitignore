@@ -88,3 +88,6 @@
 
 # Vim swap files
 ./nuxt/*.swp
+
+db
+wordpress

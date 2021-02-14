@@ -26,13 +26,13 @@ services:
       - ./db:/var/lib/mysql
 
   nuxt:
-    image: node:alpine
+    build: .
     restart: always
     volumes:
       - ./nuxt:/home/node
     tty: true
     working_dir: /home/node
-    command: [node, webhook.js]
+    command: [deno, run, --allow-net, --allow-run, .webhook.ts]
   
   nginx:
     image: nginx:alpine
